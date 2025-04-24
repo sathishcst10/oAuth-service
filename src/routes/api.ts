@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
-import { requireAuth } from '../middleware/auth';
-import graphService from '../services/graph-service';
+import { requireAuth } from '../middleware/auth.js';
+import graphService from '../services/graph-service.js';
 
 const router = express.Router();
 

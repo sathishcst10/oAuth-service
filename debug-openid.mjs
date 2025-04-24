@@ -1,0 +1,1 @@
+import * as openid from "openid-client"; console.log("Keys in openid module:", Object.keys(openid)); const { Issuer } = await import("openid-client"); console.log("Issuer exists:", !!Issuer); console.log("Issuer methods:", Object.getOwnPropertyNames(Issuer)); console.log("Issuer prototype:", Object.getOwnPropertyNames(Issuer.prototype));

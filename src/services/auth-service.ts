@@ -3,7 +3,16 @@
  * Handles token management and user information
  */
 
-import { TokenSet } from 'openid-client';
+// Define our own interface for the token structure
+interface TokenSet {
+  access_token?: string;
+  token_type?: string;
+  id_token?: string;
+  refresh_token?: string;
+  expires_at?: number;
+  expires_in?: number;
+  [key: string]: any;
+}
 
 interface UserInfo {
   sub: string;

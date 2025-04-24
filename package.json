@@ -2,9 +2,13 @@
   "name": "oauth-service",
   "version": "1.0.0",
   "description": "oAuth with microsoft SSO",
-  "main": "index.js",
+  "main": "src/index.ts",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon --watch src -e ts --exec ts-node src/index.ts",
+    "dev": "node --no-warnings --loader ts-node/esm src/index.ts",
+    "dev:watch": "nodemon --watch src -e ts --exec \"node --no-warnings --loader ts-node/esm src/index.ts\"",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +33,7 @@
     "express-session": "^1.18.1",
     "express-validator": "^7.2.1",
     "jose": "^6.0.10",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.1.9",
     "openid-client": "^6.4.2",
     "redis": "^4.7.0"
@@ -37,6 +42,7 @@
     "@types/express": "^5.0.1",
     "@types/express-session": "^1.18.1",
     "@types/node": "^22.14.1",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   }

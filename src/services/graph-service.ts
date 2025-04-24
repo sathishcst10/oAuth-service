@@ -3,7 +3,7 @@
  * Handles Microsoft Graph API requests
  */
 import axios from 'axios';
-import authService from './auth-service';
+import authService from './auth-service.js';
 
 class GraphService {
   private static instance: GraphService;
